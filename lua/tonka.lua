@@ -1,6 +1,6 @@
-local M = {}
+local tonka = {}
 
-function M.setup(opts)
+function tonka.setup(opts)
    opts = opts or {}
 
    vim.keymap.set("n", "<Leader>h", function()
@@ -12,4 +12,4 @@ function M.setup(opts)
    end)
 end
 
-return M
+return tonka
