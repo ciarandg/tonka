@@ -33,6 +33,7 @@
           packages.myPlugins = {
             start = [
               self.packages.${system}.tonka
+              pkgs.vimPlugins.plenary-nvim # helper functions
               pkgs.vimPlugins.nfnl # Fennel autocompilation
             ];
             opt = [];
