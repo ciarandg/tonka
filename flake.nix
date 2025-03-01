@@ -37,5 +37,10 @@
         };
       };
     };
+
+    # `nix develop` launches shell with custom neovim
+    devShells.${system}.default = pkgs.mkShell {
+      packages = [self.packages.${system}.nvim];
+    };
   };
 }
