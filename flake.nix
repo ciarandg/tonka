@@ -31,7 +31,10 @@
           '';
 
           packages.myPlugins = {
-            start = [self.packages.${system}.tonka];
+            start = [
+              self.packages.${system}.tonka
+              pkgs.vimPlugins.nfnl # Fennel autocompilation
+            ];
             opt = [];
           };
         };
