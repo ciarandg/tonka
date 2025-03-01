@@ -9,7 +9,6 @@ tonka.hello = function(opts)
 end
 tonka.setup = function(opts)
   local opts0 = (opts or {})
-  print(opts0)
   local function _2_()
     return tonka.hello(opts0)
   end

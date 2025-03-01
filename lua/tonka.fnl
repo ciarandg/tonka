@@ -7,7 +7,6 @@
 
 (fn tonka.setup [opts]
   (let [opts (or opts {})]
-    (print opts)
     (vim.keymap.set "n" "<Leader>h"
       (fn [] (tonka.hello opts)))))
 
