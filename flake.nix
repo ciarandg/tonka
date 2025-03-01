@@ -22,6 +22,20 @@
       };
 
       default = self.packages.${system}.tonka;
+
+      # `nix run .#nvim -- foo.tf` for Neovim with Tonka preinstalled
+      nvim = pkgs.neovim.override {
+        configure = {
+          extraConfig = ''
+            let mapleader = "\\"
+          '';
+
+          packages.myPlugins = {
+            start = [self.packages.${system}.tonka];
+            opt = [];
+          };
+        };
+      };
     };
   };
 }
